@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
         playerScore += 1
      } else if (playerSelection=="Scissors" && computerSelection=="Rock"){
         result = "Rock breaks scissors. Computer wins!"
-        computerScore +=1
+        computerScore += 1
      } else if (playerSelection=="Bite"){
         result = "You cannot bite the computer."
      } else {
@@ -65,7 +65,7 @@ function playRound(playerSelection, computerSelection) {
         round++;
     }
     if (playerScore < computerScore){console.log("Computer won " + computerScore + " of 5 games. COMPUTER WINS!!")}
-    else if (playerScore > computerScore){console.log("Player won " + computerScore + " of 5 games. PLAYER WINS!!")}
+    else if (playerScore > computerScore){console.log("Player won " + playerScore + " of 5 games. PLAYER WINS!!")}
     else if (playerScore == computerScore){console.log("It is a draw. How boring.")}
     else {console.log("I am confused.")}    
   }
