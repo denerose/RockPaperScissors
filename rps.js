@@ -38,15 +38,23 @@ function playRound(playerSelection, computerSelection) {
      } else if (playerSelection=="Bite"){
         result = "You cannot bite the computer."
      } else {
-        result = `I am a confused computer! I don't recognise ${playerSelection}. Help me?`; 
+        result = (`I am a confused computer! I don't recognise ${playerSelection}. Help me?`) 
       } 
       return (result)
       console.log(result) 
   }
-   
-  const playerSelection = getPlayerChoice();
-  const computerSelection = getComputerChoice();
 
-  console.log(playRound(playerSelection, computerSelection));
+  function game() {
+    let round = 1
+    while (round <= 5){
+        console.log("round # " + round)
+        const playerSelection = getPlayerChoice();
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        round++;
+    }    
+  }
+
+  game();
 
   
