@@ -3,23 +3,16 @@ console.log("I am running!");
 let options = ["Rock", "Paper", "Scissors"]
 let playerScore = 0
 let computerScore = 0
+let playerSelection = "TBC"
+const computerSelection = "TBC"
 
 function getComputerChoice() {
     return (options[(Math.floor(Math.random() * options.length))]);
 }
 
-function getPlayerChoice (){
-   let input = prompt("Choose: Rock, Paper or Scissors?", "Rock");
-   return toTitleCase(input);
-}
-
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-  }
-
-function playRound(playerSelection, computerSelection) {
+function playRound(clicked_id, computerSelection) {
+   computerSelection = getComputerChoice();
+   playerSelection = clicked_id
     console.log("Player chooses..." + playerSelection)
     console.log("Computer chooses..." + computerSelection)
     let result = "TBC"
@@ -48,28 +41,6 @@ function playRound(playerSelection, computerSelection) {
      } else {
         result = (`I am a confused computer! I don't recognise ${playerSelection}. Help me?`) 
       } 
-      return (result)
       console.log(result) 
+      return (result)
   }
-
-  function game() {
-    let round = 1
-    playerScore = 0
-    computerScore = 0
-    while (round <= 5){
-        console.log("round # " + round)
-        let playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("Player: " + playerScore + " -- Computer: " + computerScore);
-        round++;
-    }
-    if (playerScore < computerScore){console.log("Computer won " + computerScore + " of 5 games. COMPUTER WINS!!")}
-    else if (playerScore > computerScore){console.log("Player won " + playerScore + " of 5 games. PLAYER WINS!!")}
-    else if (playerScore == computerScore){console.log("It is a draw. How boring.")}
-    else {console.log("I am confused.")}    
-  }
-
-  game();
-
-  
