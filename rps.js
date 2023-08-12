@@ -15,8 +15,8 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
    computerSelection = getComputerChoice();
-   console.log("Player chooses..." + playerSelection);
-   console.log("Computer chooses..." + computerSelection);
+   document.getElementById("playerText").innerText = "Player chooses... " + playerSelection;
+   document.getElementById("computerText").innerText = "Computer chooses... " + computerSelection
    if(playerSelection==computerSelection) {
         roundResult = "DRAW! No one wins!";
      } else if (playerSelection=="Rock" && computerSelection=="Scissors") {
@@ -64,11 +64,13 @@ function playRound(playerSelection, computerSelection) {
    function didYouWin() {
    if(playerScore >=5) {
       gameResult = "You won the game!! :D"
+      document.getElementById("selectionText").innerText ="GAME FINISHED!"
       winner = "You"
    }
    else if(computerScore >=5) {
-      gameResult = "Computer won! You lost the game :("
-      winner = "The computer"
+      gameResult = "Computer won! You lost the game :(";
+      document.getElementById("selectionText").innerText ="GAME OVER!"
+      winner = "The computer";
    }
    else {gameResult = "No winner yet, first to 5 will win, keep playing!"}
    document.getElementById("gameStatus").innerText = gameResult
