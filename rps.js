@@ -42,7 +42,7 @@ function playRound(clicked_id, computerSelection) {
         result = (`I am a confused computer! I don't recognise ${playerSelection}. Help me?`) 
       }; 
       document.getElementById("resultsText").innerText = result;
-      document.getElementById("playerScoreText").innerHTML = playerScore;
-      document.getElementById("compScoreText").innerHTML = computerScore;
+      document.getElementById("playerScoreText").innerText = playerScore;
+      document.getElementById("compScoreText").innerText = computerScore;
       return (result);
   }
