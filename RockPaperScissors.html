@@ -10,12 +10,17 @@
     </head>
     <body>     
         <h1>This is a game</h1>
-        <table>
+        <div id="btnsDiv"><table>
             <tr>
                 <td><button onclick="playRound(this.id, computerSelection)" type="button" id="Rock">ROCK</button></td>
                 <td><button onclick="playRound(this.id, computerSelection)" type="button" id="Paper">PAPER</button></td>
                 <td><button onclick="playRound(this.id, computerSelection)" type="button" id="Scissors">SCISSORS</button></td>
             </tr>
-        </table>
+        </table></div>
+        <div id="resultsText"></div>
+        <div id="scoreDiv">
+            <p>Computer Score: <span id="compScoreText"></span></p>
+            <p>Player Score: <span id="playerScoreText"></span></p>
+        </div>
     </body>
 </html>

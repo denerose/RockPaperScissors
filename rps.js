@@ -4,7 +4,7 @@ let options = ["Rock", "Paper", "Scissors"]
 let playerScore = 0
 let computerScore = 0
 let playerSelection = "TBC"
-const computerSelection = "TBC"
+let computerSelection = "TBC"
 
 function getComputerChoice() {
     return (options[(Math.floor(Math.random() * options.length))]);
@@ -12,10 +12,10 @@ function getComputerChoice() {
 
 function playRound(clicked_id, computerSelection) {
    computerSelection = getComputerChoice();
-   playerSelection = clicked_id
-    console.log("Player chooses..." + playerSelection)
-    console.log("Computer chooses..." + computerSelection)
-    let result = "TBC"
+   playerSelection = clicked_id;
+    console.log("Player chooses..." + playerSelection);
+    console.log("Computer chooses..." + computerSelection);
+    let result = "TBC";
     if(playerSelection==computerSelection) {
         result = "DRAW! No one wins!";
      } else if (playerSelection=="Rock" && computerSelection=="Scissors") {
@@ -40,7 +40,9 @@ function playRound(clicked_id, computerSelection) {
         result = "You cannot bite the computer."
      } else {
         result = (`I am a confused computer! I don't recognise ${playerSelection}. Help me?`) 
-      } 
-      console.log(result) 
-      return (result)
+      }; 
+      document.getElementById("resultsText").innerText = result;
+      document.getElementById("playerScoreText").innerHTML = playerScore;
+      document.getElementById("compScoreText").innerHTML = computerScore;
+      return (result);
   }
