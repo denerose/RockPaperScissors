@@ -9,20 +9,26 @@
         <script src="rps.js"></script>
     </head>
     <body>     
+        <div id="gameBox">
         <h1>This is a game</h1>
-        <div id="btnsDiv"><table>
-            <tr>
-                <td><button onclick="playGame(this.id)" type="button" id="Rock">ROCK</button></td>
-                <td><button onclick="playGame(this.id)" type="button" id="Paper">PAPER</button></td>
-                <td><button onclick="playGame(this.id)" type="button" id="Scissors">SCISSORS</button></td>
-            </tr>
-        </table></div>
-        <div id="gameStatus"></div>
-        <script>document.getElementById("gameStatus").innerText = gameResult</script>
-        <div id="resultsText"></div>
+        <div id="btnDiv">
+            <table id="btnTable">
+                <tr>
+                    <td><button onclick="playGame(this.id)" type="button" id="Rock">ROCK</button></td>
+                    <td><button onclick="playGame(this.id)" type="button" id="Paper">PAPER</button></td>
+                    <td><button onclick="playGame(this.id)" type="button" id="Scissors">SCISSORS</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="resultsDiv">
+            <p id="gameStatus"></p>
+            <script>document.getElementById("gameStatus").innerText = gameResult</script>
+            <p id="resultsText"></p>
+        </div>
         <div id="scoreDiv">
             <p>Computer Score: <span id="compScoreText"></span></p>
             <p>Player Score: <span id="playerScoreText"></span></p>
+        </div>
         </div>
     </body>
 </html>

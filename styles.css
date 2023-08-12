@@ -1,0 +1,51 @@
+#gameBox {
+    background-color: indigo; 
+    background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
+    margin: 5%;
+    padding: 1%;
+}
+
+button {
+    opacity: 80%;
+    width: 120px;
+    height: 30px;
+}
+h1 {
+    text-align: center;
+    opacity: 80%;
+}
+p {text-align: center;}
+
+#btnDiv {
+    overflow-x: auto;
+}
+#btnTable {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+td {text-align: center;}
+
+#resultsDiv {
+    background: rgba(255, 255, 255, 0.3) ;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 1px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#scoreDiv {
+    background: rgba(255, 255, 255, 0.5) ;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 1px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#gameStatus {font-weight: bold;}
